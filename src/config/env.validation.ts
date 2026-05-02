@@ -13,6 +13,7 @@ export const envValidationSchema = Joi.object({
   DB_NAME: Joi.string().default('ledgers_saas'),
   DB_SYNCHRONIZE: Joi.boolean().default(false),
   DB_LOGGING: Joi.boolean().default(false),
+  DB_MIGRATIONS_RUN: Joi.boolean().default(true),
 
   JWT_SECRET: Joi.string()
     .min(24)

@@ -178,6 +178,7 @@ DB_PASSWORD=postgres
 DB_NAME=ledgers_saas
 DB_SYNCHRONIZE=false
 DB_LOGGING=false
+DB_MIGRATIONS_RUN=true
 JWT_SECRET=replace-this-with-a-long-random-secret
 JWT_EXPIRES_IN=1h
 BCRYPT_ROUNDS=12
@@ -193,7 +194,9 @@ npm install
 
 2. Run PostgreSQL locally and prepare `.env`.
 
-3. Run migrations:
+3. Migrations run automatically on app startup in non-production environments by default.
+
+If you want to run them manually instead:
 
 ```bash
 npm run migration:run
